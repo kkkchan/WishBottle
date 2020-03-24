@@ -1,0 +1,93 @@
+/* pages/bottle/bottle.wxss */
+.container{
+  padding-top: 0rpx;
+ 
+}
+.container .search{
+  display: flex;
+  flex-direction: row;
+  background-color: #2A8CE5;
+  height: 65rpx;
+  padding:12rpx 0 12rpx 15rpx;
+  width: calc(100% - 15rpx);
+}
+.container .search .search_left{
+  flex:8;
+  background: #4EA3E7;
+  text-align: left;
+}
+.container .search .search_left .search_img{
+  width: 35rpx;
+  height:35rpx;
+  display: inline-block;
+  padding:15rpx;
+}
+
+.container .search .search_left .search_input{
+  display: inline-block;
+  height: 63rpx;
+  font-size:30rpx
+}
+.search_placeholder{
+  color:#8CCEFD;
+}
+
+.container .search .search_right{
+  flex:1;
+  text-align: center;
+}
+.container .search .search_right .refresh_img{
+  width: 43rpx;
+  height:43rpx;
+  padding:10rpx;
+}
+
+.container .feed-item{
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx;
+  border-top:2px solid #eee;
+  border-bottom: 2px solid #eee;
+  width: calc(100% - 40rpx);
+}
+.container .feed-item .feed-source{
+  height: 50rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.container .feed-item .feed-source .user_img{
+  width: 45rpx;
+  height:45rpx;
+  border-radius: 45rpx;
+}
+.container .feed-item .feed-source text{
+  color: #a0acac;
+  font-size: 32rpx;
+  margin-left: 15rpx;
+}
+
+.container .feed-item .feed-source view text:first-child{
+  font-size: 32rpx;
+}
+.container .feed-item .feed-body{
+  padding-top: 10rpx;
+}
+.container .feed-item .feed-body .h-title{
+  font-size: 31rpx;
+}
+.container .feed-item .feed-body .h-content{
+  padding-top:10rpx;
+  font-size:26rpx;
+  color:#5b5b5b; 
+  max-height: 120rpx;
+  overflow: hidden;
+}
+.container .feed-item .feed-body .h-comment{
+  padding-top:10rpx;
+  color:#a0acac;
+  padding-right: 10rpx;
+  font-size: 26rpx;
+
+}

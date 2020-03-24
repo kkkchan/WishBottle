@@ -1,0 +1,52 @@
+<!--pages/center/center.wxml-->
+<view class="header">
+  <view class="intro">
+  <text class="nickname" >{{userInfo.nickName}}</text>
+  <text >{{userInfo.city}}</text>
+  </view>
+  <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+</view>
+<view class="body">
+  <view>
+    <view bindtap="bindMyBottle">
+      <image src="/imgs/bottle_on.png"></image>
+      我的心愿瓶
+    </view>
+    <view>
+      <!-- <text style="color:#999999">完整度: </text><text style="color:#06B089">90%</text> -->
+      <image src="/imgs/right.png"></image>
+    </view>
+  </view>
+  <view>
+    <view bindtap="bindMyTreeHole">
+      <image src="/imgs/tree_on.png"></image>
+      我的树洞
+    </view>
+     <image src="/imgs/right.png"></image>
+  </view>
+  <view bindtap="bindMyComment">
+    <view>
+      <image src="/imgs/comment.png"></image>
+      我的评论
+    </view>
+     <image src="/imgs/right.png"></image>
+  </view>
+  <view bindtap="bindMyCollect">
+    <view >
+      <image src="/imgs/collect.png"></image>
+      我的赞/收藏
+    </view>
+     <image src="/imgs/right.png"></image>
+  </view>
+   <view>
+      <view>
+        <image src="/imgs/advice.png"></image>
+        意见反馈
+      </view>
+      <image src="/imgs/right.png"></image>
+  </view>
+  <!-- <view class="switch" style="justify-content: center">切换至我要招人</view> -->
+</view>
+<view class="foot">
+  <view>退出登录</view>
+</view>

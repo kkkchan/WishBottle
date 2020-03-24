@@ -1,0 +1,7 @@
+{
+  "usingComponents": {},
+  "navigationBarBackgroundColor": "#0068C4",
+  "navigationBarTitleText": "树洞",
+  "navigationBarTextStyle": "white",
+  "enablePullDownRefresh": true
+}

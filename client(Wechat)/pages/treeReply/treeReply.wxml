@@ -1,0 +1,68 @@
+<!--pages/treeReply/treeReply.wxml-->
+
+<wxs src="../tools.wxs" module="tools" />
+
+<scroll-view scroll-y="true" class="container">
+  <view class="header">{{treeHole.title}}</view>
+  <view class="body">
+    <view class="writer">
+      <image src="{{treeHole.writer_avatarUrl}}"  class="img"></image>
+      <text>{{treeHole.nickName}}</text>
+    </view>
+    <view class="content">
+    {{treeHole.content}}
+    </view>
+    <view class="copyright small-font">
+    编辑于{{treeHole.strPostDate}} • 著作权归作者所有
+    </view>
+  </view>
+  <view class="comment">
+    <text class="black-font">评论</text>
+    <block wx:for="{{treeReplies}}" wx:for-item="item" wx:for-index="idx">
+      <view class="comment-item" style="display:{{tools.isInArray(idx,delArr) ? 'none':'flex'}}" >
+        <image src="{{item.replier_avatarUrl}}" class="img"></image>
+        <view class="comment-info">
+          <view class="black-font">{{item.nickName}}  </view>
+          <view >{{item.content}}</view>
+          <view class="small-font comment-date"><text>{{item.strPostDate}}</text>  
+                <text wx:if="{{isMine=='1'}}" style="color:#2E6CA4" bindtap="delComment" id="{{item.id}}" data-arrid="{{idx}}">删除</text></view>
+        </view>
+      </view>
+    </block>
+  </view>
+</scroll-view>
+<view class="foot">
+<image  wx:if="{{isLike}}"  src="/imgs/like_on.png" bindtap="bindLike"></image>
+<image  wx:else src="/imgs/like.png" bindtap="bindLike"></image>
+<image   wx:if="{{isCollect}}" src="/imgs/collect_on.png" bindtap="bindCollect"></image>
+<image  wx:else src="/imgs/collect.png" bindtap="bindCollect"></image>
+<!-- <form bindsubmit="uploadComment">
+  <input  placeholder=" 添加评论..." class="comment" bindinput="bindKeyInput"></input>
+  <view bindtap="uploadComment" >发布</view>
+</form> -->
+<!-- <form bindsubmit="uploadComment"> -->
+<input placeholder=" 添加评论..." class="comment" value="{{inputValue}}" bindinput="bindKeyInput"></input>
+<view bindtap="uploadComment" >发布</view></view>
+  <!-- <button form-type="submit">发布</button> -->
+  <!-- <view bindtap="uploadComment" >发布</view>
+</form></view> -->
+
+<view wx:if="{{isShow}}" class="mask" bindtap="closeMask">
+</view>
+
+<view class="inputArea" wx:if="{{isShow}}" id="inputArea">
+    <view class="inputHeader">
+      <text class="inputHeaderText">评论给 nickname(作者)</text>
+      <image   wx:if="{{isEnlarge}}" src="/imgs/zoomOut.png" bindtap="bindEnlarge"></image>
+      <image  wx:else src="/imgs/zoomIn.png" bindtap="bindEnlarge"></image>
+    </view>
+    <textarea 
+    auto-height="{{true}}"
+    placeholder="友善的评论是交流的起点" 
+    auto-focus="{{true}}"
+    fixed="{{true}}"
+    hold-keyboard="{{true}}"
+    bindfocus="focushandle"
+    bindconfirm="uploadComment">
+    </textarea>
+</view>

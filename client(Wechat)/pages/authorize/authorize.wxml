@@ -1,0 +1,5 @@
+<view wx:if="{{isShow}}" class="auth">
+  <view class="title">微信授权页面</view>
+  <view class="describe">此页面是微信授权页面，点击下方按钮弹出授权或跳转页面</view>
+  <button class="btn" open-type='getUserInfo'  bindgetuserinfo='onAuth'>点击微信授权</button>
+</view>

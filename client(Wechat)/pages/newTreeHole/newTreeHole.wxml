@@ -1,0 +1,9 @@
+<!--pages/newTreeHole/newTreeHole.wxml-->
+<form bindsubmit="publish">
+  <view class="container">
+  <textarea class="title" placeholder="请输入标题" auto-height="true" name="title" value="{{titleText}}"></textarea>
+
+  <textarea class="content" placeholder="请输入内容" name="content" value="{{contentText}}"></textarea>
+  <button class="btn" form-type="submit">发布</button>
+  </view>
+</form>

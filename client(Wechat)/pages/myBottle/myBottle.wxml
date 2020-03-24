@@ -1,0 +1,15 @@
+<!--pages/myBottle/myBottle.wxml-->
+<wxs src="../tools.wxs" module="tools" />
+<view class="container">
+  <block wx:for="{{feed}}" wx:for-index="idx" wx:for-item="item">
+    <view class="item" style="display:{{tools.isInArray(idx,delArr) ? 'none':'flex'}}">
+     <image wx:if="{{item.itemType}}" src="/imgs/text.png" class="icon"></image>
+      <image wx:else src="/imgs/voice1.png" class="icon"></image>
+      <view>
+        <view class="content" wx:if="{{item.itemType}}" data-arrid="{{idx}}" style="display:{{isblock&&(clickidx==idx) ? 'block':'-webkit-box'}}" bindtap="bindContent"> {{item.content}}</view>
+        <view class="content" wx:else bindtap="bindVoice" data-filename="{{item.content}}"> 语音心愿瓶(点击收听)</view>
+        <view class="del" ><text style="color:#a0acac">{{item.strPostDate}}   </text><text style="color:#2E6CA4" catchtap="delMyBottle" data-arrid="{{idx}}" id="{{item.id}}">删除</text></view>
+      </view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,33 @@
+<!--pages/bottle/bottle.wxml-->
+<view  class="container" >
+
+  <view class="search">
+    <view class="search_left">
+      <image src="/imgs/search.png" class="search_img"></image>
+      <input placeholder="搜索" class="search_input" placeholder-class="search_placeholder"></input>
+    </view>
+    <view class="search_right">
+      <image src='../../imgs/refresh.png' class="refresh_img"> </image>
+    </view>
+  </view>
+
+<block wx:for="{{feed}}" wx:for-index="idx" wx:for-item="item">
+  <view class="feed-item" id="{{item.id}}" data-ismine="{{item.isMine}}" bindtap="bindItem">
+    <view class="feed-source">
+        <image src="{{item.writer_avatarUrl}}" class="user_img"></image>
+          <text>{{item.nickName}}</text>
+    </view>
+    <view class="feed-body">
+        <view class="h-title">
+          <text>{{item.title}}</text>
+        </view>
+        <view class="h-content">
+        <text>{{item.content}}</text>
+        </view>
+        <view class="h-comment">
+       <text> {{item.likeNum}}点赞 • {{item.replyNum}}评论 • {{item.strPostDate}}</text>
+        </view>
+    </view>
+  </view>
+</block>
+</view>

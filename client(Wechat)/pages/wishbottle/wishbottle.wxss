@@ -1,0 +1,75 @@
+.container{
+  /* justify-content:center */
+}
+
+.background{
+  position: fixed;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+}
+.operate{
+  display: flex;
+  bottom: 20px;
+  justify-content: space-between;
+  width: calc(100% - 40px);
+  position: fixed;
+}
+.operate view{
+  text-align: center;
+}
+.operate view .bottle{
+  width: 30px;
+  height:30px;
+}
+
+.wishbottle{
+  width: 0px;
+  height: 0px;
+}
+
+.mask{
+  position: fixed;
+  z-index: 98;
+  width: 100%;
+  height: 100%;
+  left: 0rpx;
+  top:0rpx;
+  background-color: black;
+  opacity: 0.5;
+}
+
+
+.showArea{
+  position: fixed;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 600rpx;
+  top:150rpx;
+}
+.showArea .avatar{
+ width: 100rpx;
+ height: 100rpx;
+ border-radius: 20rpx;
+ margin-right: 20rpx;
+}
+.showArea .contentArea{
+  background-color:#B9D3EE;
+  height: 400rpx;
+  color:black;
+  border-radius: 20rpx;
+  padding: 20rpx;
+  overflow: scroll;
+}
+
+.showArea .userArea{
+  display: flex;
+  align-items: center;
+   margin-bottom: 20rpx;
+}
+.showArea .userArea  .sex{
+  width: 50rpx;
+  height: 50rpx;
+}

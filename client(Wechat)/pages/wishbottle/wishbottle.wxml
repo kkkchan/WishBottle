@@ -1,0 +1,44 @@
+<view class="container">
+  <image class="background" src="/imgs/background.jpg">
+  </image>
+
+  <image animation="{{animation}}"  src="/imgs/bottle1.png" class="wishbottle" bindtap="bindWishBottle" ></image>
+
+  <view wx:if="{{isShow}}" class="mask" bindtap="closeMask"> </view>
+  <view wx:if="{{isShow}}" class="showArea">
+    <view class="userArea">
+      <image src="{{avatarUrl}}" class="avatar"></image>
+      <view>
+        <view style="display:flex;align-items:center"> 
+          <image src="/imgs/boy.png" class="sex" wx:if="{{sex}}"></image>
+          <image src="/imgs/gril.png" class="sex" wx:else></image>
+          <text style="margin-left:20rpx">{{nickName}}</text>
+        </view>
+        <text>{{province}} {{city}}</text>
+      </view>
+    </view>
+    <view class="contentArea" wx:if="{{itemType}}">
+      {{content}}
+    </view>
+    <view class="contentArea" wx:else>
+      <image src="/imgs/voice.png" style="width:100rpx;height:100rpx" bindtap="bindPlayVoice"></image>
+    </view>
+    <view style="text-align:right">{{strPostDate}}</view>
+  </view>
+
+
+  <view class="operate">
+    <view bindtap="throwBottle">
+      <image src="/imgs/bottle1.png" class="bottle"></image>
+      <view> 扔一个</view>
+    </view>
+    <view bindtap="pickUpBottle">
+      <image src="/imgs/bottle1.png" class="bottle"></image>
+      <view> 捡一个</view>
+    </view>
+    <view bindtap="myBottle">
+      <image src="/imgs/bottle1.png" class="bottle"></image>
+      <view>我的瓶子</view>
+    </view>
+  </view>
+</view>

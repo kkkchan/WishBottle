@@ -1,0 +1,61 @@
+/* pages/center/center.wxss */
+.header{
+  height: 160rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 12rpx solid #F9FBFA;
+  padding: 0 40rpx;
+  font-size:30rpx;
+}
+.intro{
+  display: flex;
+  flex-direction:column;
+}
+.nickname{
+  font-size: 65rpx;
+  margin-bottom: 10rpx;
+  color: black;
+
+}
+.avatar{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx
+}
+.body{
+  display: flex;
+  flex-direction:column;
+}
+.body>view{
+  display:flex;
+  flex-direction:row; 
+  justify-content: space-between; 
+  align-items: center;
+  border-bottom:1rpx solid #F9FBFA;
+  padding: 10rpx 20rpx;
+  font-size:35rpx;
+}
+.body>view view{
+  display: flex;
+  align-items: center;
+}
+.body image {
+  width: 70rpx;
+  height: 70rpx;
+  margin: 20rpx;
+}
+.switch{
+border-top: 15rpx solid  #F9FBFA;
+height: 85rpx;
+font-size: 39rpx;
+}
+.foot{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F9FBFA;
+  padding-top: 40rpx;
+  color: gray;
+  height: calc(100% - 957rpx);
+}

@@ -1,0 +1,9 @@
+var isInArray = function (a, array) {
+  for (var i = 0; i < array.length; ++i) {
+    if (array[i] == a) {
+      return true;
+    }
+  }
+  return false;
+}
+module.exports.isInArray = isInArray;

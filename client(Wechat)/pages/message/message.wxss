@@ -1,0 +1,36 @@
+/* pages/message/message.wxss */
+
+.body{
+  display: flex;
+  flex-direction:column;
+  align-items: stretch;
+}
+
+.body .item{
+  display:flex;
+  flex-direction:row; 
+  justify-content: space-between; 
+  align-items: center;
+  border-bottom:6rpx solid #F9FBFA;
+  padding: 10rpx 20rpx;
+  font-size:35rpx;
+  
+}
+.body .item .right_left{
+  display: flex;
+  align-items: center;
+}
+.reddot{
+  background-color: red;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 40rpx;
+  color: white;
+  text-align: center;
+  line-height: 40rpx;
+}
+.body image {
+  width: 70rpx;
+  height: 70rpx;
+  margin: 20rpx;
+}

@@ -1,0 +1,61 @@
+{
+  "pages": [
+    "pages/authorize/authorize",
+    "pages/wishbottle/wishbottle",
+    "pages/myBottle/myBottle",
+    "pages/myComment/myComment",
+    "pages/throwbottle/throwbottle",
+    "pages/treeReply/treeReply",
+    "pages/treeHole/treeHole",
+    "pages/newTreeHole/newTreeHole",
+    "pages/newLike/newLike",
+    "pages/center/center",
+    "pages/myCollect/myCollect",
+    "pages/myTreeHole/myTreeHole",
+    "pages/message/message"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#4EA3E7"
+  },
+  "tabBar": {
+    "selectedColor": "#2A8CE5",
+    "list": [
+      {
+        "pagePath": "pages/wishbottle/wishbottle",
+        "text": "心愿瓶",
+        "iconPath": "imgs/bottle.png",
+        "selectedIconPath":"imgs/bottle_on.png"
+      },
+      {
+        "pagePath": "pages/treeHole/treeHole",
+        "text": "树洞",
+        "iconPath": "imgs/tree.png",
+        "selectedIconPath":"imgs/tree_on.png"
+      },
+      {
+        "pagePath": "pages/newTreeHole/newTreeHole",
+        "text": "",
+        "iconPath": "imgs/publish.png",
+        "selectedIconPath": "imgs/publish.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "imgs/message.png",
+        "selectedIconPath":"imgs/message_on.png"
+      },
+      {
+        "pagePath": "pages/center/center",
+        "text": "我的",
+        "iconPath": "imgs/me.png",
+        "selectedIconPath":"imgs/me_on.png"
+      }
+    ]
+  },
+  "usingComponents": {},
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

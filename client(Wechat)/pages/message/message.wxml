@@ -1,0 +1,23 @@
+<view class="body">
+  <view bindtap="bindNewLike" class="item">
+    <view class="right_left">
+        <image src="/imgs/like.png"> </image>
+        赞 
+    </view>
+    <view class="right_left">
+      <view class="reddot" wx:if="{{likeNum}}">{{likeNum}}</view>
+      <image src="/imgs/right.png"></image>
+    </view>
+  </view>
+
+  <view bindtap="bindNewComment" class="item">
+    <view class="right_left">
+        <image src="/imgs/comment1.png"> </image>
+        评论
+    </view>
+    <view class="right_left">
+      <view class="reddot" wx:if="{{commentNum}}">{{commentNum}}</view>
+      <image src="/imgs/right.png"></image>
+    </view>
+  </view>
+</view>

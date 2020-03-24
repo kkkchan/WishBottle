@@ -1,0 +1,24 @@
+<wxs src="../tools.wxs" module="tools" />
+<scroll-view scroll-y="true" class="container">
+<block wx:for="{{feed}}" wx:for-index="idx" wx:for-item="item">
+  <view class="feed-item" id="{{item.id}}" bindtap="bindItem"  style="display:{{tools.isInArray(idx,delArr) ? 'none':'flex'}}" >
+    <view class="feed-source">
+        <image src="{{userInfo.avatarUrl}}" class="user_img"></image>
+          <text>{{userInfo.nickName}}</text>
+    </view>
+    <view class="feed-body">
+        <view class="h-title">
+          <text>{{item.title}}</text>
+        </view>
+        <view class="h-content">
+        <text>{{item.content}}</text>
+        </view>
+        <view class="h-comment">
+       <text> {{item.likeNum}}点赞 • {{item.replyNum}}评论 • {{item.strPostDate}}</text>
+       <text style="color:#2E6CA4" id="{{item.id}}" catchtap="delMyTreeHole" data-arrid="{{idx}}" >删除</text>
+        </view>
+    </view>
+  </view>
+</block>
+</scroll-view>
+

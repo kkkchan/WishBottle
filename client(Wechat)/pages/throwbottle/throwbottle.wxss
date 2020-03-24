@@ -1,0 +1,53 @@
+/* pages/throwbottle/throwbottle.wxss */
+.background{
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+}
+
+.area{
+  font-size: 20px;
+background-color: black;
+opacity: 0.5;
+top: 240rpx;
+color: white;
+border-radius: 30rpx;
+height: 400rpx;
+padding: 20rpx;
+width: 690rpx
+}
+
+
+.foot{
+  position: fixed;
+  bottom: 0px;
+  background-color: gray;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+width: calc(100% - 10px);
+}
+.foot .icon{
+  width:40px;
+  height: 40px;
+}
+.foot .tt{
+  background-color: white;
+width: calc(100% - 90px);
+height: 38px;
+margin-left: 20px;
+border-radius: 6px;
+vertical-align: center;
+line-height: 38px;
+padding: 0 10px;
+text-align: center;
+}
+
+.bottle{
+position: fixed;
+width: 0px;
+height: 0px;
+bottom: 55px;
+right: 10px;
+}

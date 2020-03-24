@@ -1,0 +1,14 @@
+<!--pages/throwbottle/throwbottle.wxml-->
+<view class="container">
+  <image src='/imgs/background1.jpg' class="background"></image>
+  <textarea placeholder="请输入心愿" bindinput="bindTextAreaInput" class="area" value="{{textAreaValue}}"> </textarea>
+
+  <image animation="{{animation}}" src="/imgs/bottle_on.png" class="bottle"></image>
+  <view class="foot"> 
+    <image src="/imgs/keyboard.png" class="icon" wx:if="{{flag}}"></image>
+    <!-- <image src="/imgs/voice.png" class="icon" bindtap="bindIcon" wx:else></image> -->
+    <view class="tt" wx:if="{{flag}}" bindtap="throwOut" > <text>扔出去</text> </view>
+    <!-- <view class="tt" wx:else bindtap="showTips"  bindlongpress="beginRecord"  bindtouchend="endRecord" bindtouchmove="upCancle"> <text>按住说话</text></view> -->
+  </view>
+
+</view>

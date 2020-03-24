@@ -1,0 +1,28 @@
+<!--pages/newLike/newLike.wxml-->
+
+<wxs src="../tools.wxs" module="tools" />
+<view class="container">
+<block wx:for="{{feed}}" wx:for-item="item" wx:for-index="idx">
+  <view class="item" style="display:{{tools.isInArray(idx,delArr) ? 'none':'flex'}}" bindtap="nvToTreeReply" id="{{item.treeHoleId}}">
+    <view class="left">
+      <image src="{{item.avatarUrl}}" class="img1"></image>
+    </view>
+    <view class="right">
+      <view  class="r-l">
+        <text style="color: #818A8F;font-size: 13px;">{{item.nickName}}</text>
+        <text class="content" wx:if="{{flag==1}}">赞了你的树洞</text>
+        <text class="content" wx:else>{{item.content}}</text>
+        <!-- <text class="font1" style="color: #818A8F">我的树洞</text>
+        <text class="font1">12345</text> -->
+        <text style="font-size:12px ;margin-top:4px;color: #818A8F">{{item.strPostDate}}</text>
+      </view>
+      <view  class="r-r">
+      <view class="r-box">
+        {{item.title}}
+      </view>
+      <view class="del" wx:if="{{flag==2}}" id="{{item.treeReplyId}}" catchtap="delMyComment" data-arrid="{{idx}}" >删除</view>
+      </view>
+    </view>
+  </view>
+  </block>
+</view>

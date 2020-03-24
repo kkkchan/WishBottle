@@ -1,0 +1,20 @@
+/* pages/newTreeHole/newTreeHole.wxss */
+
+.title{
+  border-bottom: 10rpx solid gainsboro;
+  padding: 10rpx;
+  font-size: 40rpx;
+  max-height: 200rpx;
+}
+
+.content{
+  margin-top: 20rpx;
+  border:1rpx dashed gainsboro;
+  padding: 10rpx;
+  height: 700rpx;
+}
+.btn{
+  color: white;
+  background-color: #7EC0EE;
+  margin-top: 20rpx;
+}
